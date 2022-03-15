@@ -11,9 +11,9 @@ library(labelled)
 
 # data loading ------------------------------------------------------------
 set.seed(42)
-data.raw <- tibble(id=gl(2, 10), group = gl(2, 10), outcome = rnorm(20))
-# data.raw <- read_excel("dataset/file.xlsx") %>%
-#   janitor::clean_names()
+# data.raw <- tibble(id=gl(2, 10), group = gl(2, 10), outcome = rnorm(20))
+data.raw <- read_excel("dataset/sindesmose.xlsx") %>%
+  janitor::clean_names()
 
 Nvar_orig <- data.raw %>% ncol
 Nobs_orig <- data.raw %>% nrow
@@ -21,7 +21,8 @@ Nobs_orig <- data.raw %>% nrow
 # data cleaning -----------------------------------------------------------
 
 data.raw <- data.raw %>%
-  # select() %>%
+  select(-nome) %>%
+  rename(id = prontuario) %>%
   mutate() %>%
   filter()
 
@@ -36,8 +37,8 @@ data.raw <- data.raw %>%
 
 data.raw <- data.raw %>%
   set_variable_labels(
-    group = "Study group",
-    outcome = "Study outcome",
+    # group = "Study group",
+    # outcome = "Study outcome",
   )
 
 # analytical dataset ------------------------------------------------------
@@ -46,8 +47,9 @@ analytical <- data.raw %>%
   # select analytic variables
   select(
     id,
-    group,
-    outcome,
+    # group,
+    # outcome,
+    everything(),
   )
 
 Nvar_final <- analytical %>% ncol
