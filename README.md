@@ -1,6 +1,11 @@
 # Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose
 
-Objetivo
+Avaliar
+consistência de mensurações radiográficas
+para diagnóstico de sindesmose tibiofibular distal,
+em tornozelos normais,
+nas posições de flexão dorsal 15 graus e flexão plantar 20 graus,
+através de cortes tomográficos no plano axial.
 
 Análise Estatística para Isnar Castro (INTO, 2022)
 
