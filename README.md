@@ -1,4 +1,4 @@
-# [title]
+# Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose
 
 Objetivo
 
