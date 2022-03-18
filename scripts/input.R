@@ -22,7 +22,10 @@ Nobs_orig <- data.raw %>% nrow
 
 data.raw <- data.raw %>%
   select(-nome) %>%
-  rename(id = prontuario) %>%
+  mutate_at(3:12, parse_number) %>%
+  rename(
+      id = prontuario,
+  ) %>%
   mutate() %>%
   filter()
 
