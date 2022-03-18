@@ -25,6 +25,14 @@ data.raw <- data.raw %>%
   mutate_at(3:12, parse_number) %>%
   rename(
       id = prontuario,
+      ante_plantar = ant_pre,
+      ante_dorsal = ant_pos,
+      incis_plantar = incis_pre,
+      incis_dorsal = incis_pos,
+      post_plantar = post_pre,
+      post_dorsal = post_pos,
+      zwipp_plantar = zwipp_plan,
+      zwipp_dorsal = zwipp_dors,
   ) %>%
   mutate() %>%
   filter()
