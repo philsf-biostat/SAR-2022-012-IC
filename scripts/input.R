@@ -28,8 +28,8 @@ data.raw <- data.raw %>%
       ante_dorsal = ant_pos,
       incis_plantar = incis_pre,
       incis_dorsal = incis_pos,
-      post_plantar = post_pre,
-      post_dorsal = post_pos,
+      poste_plantar = post_pre,
+      poste_dorsal = post_pos,
       zwipp_plantar = zwipp_plan,
       zwipp_dorsal = zwipp_dors,
   ) %>%
