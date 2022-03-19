@@ -75,4 +75,7 @@ analytical_mockup <- tibble( id = c( "1", "2", "3", "...", "N") ) %>%
 # long data
 analytical_long <- analytical %>%
   pivot_longer(3:12, values_to = "outcome") %>%
-  separate(name, into = c("mens", "posicao"))
+  separate(name, into = c("mens", "posicao")) %>%
+  set_variable_labels(
+    outcome = "Mensuração",
+  )
