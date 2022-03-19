@@ -4,13 +4,13 @@
 # tables ------------------------------------------------------------------
 
 # mensuracoes como variaveis / avaliador como observacoes
-tab_inf <- analytical_long %>%
+tab_inf <- analytical %>%
   pivot_wider(names_from = mens, values_from = outcome) %>%
   tbl_summary(include = 4:8, by = posicao) %>%
   add_p()
 
 # avaliadores como variaveis / mensuracao como observacoes
-tab_inf_2 <- analytical_long %>%
+tab_inf_2 <- analytical %>%
   pivot_wider(names_from = avaliador, values_from = outcome) %>%
   tbl_summary(include = 4:8, by = posicao)
 

@@ -43,12 +43,17 @@ data.raw <- data.raw %>%
     id = factor(id), # or as.character
   )
 
+# reshape
+data.raw <- data.raw %>%
+  pivot_longer(3:12, values_to = "outcome") %>%
+  separate(name, into = c("mens", "posicao"))
+
 # labels ------------------------------------------------------------------
 
 data.raw <- data.raw %>%
   set_variable_labels(
     # group = "Study group",
-    # outcome = "Study outcome",
+    outcome = "Mensuração",
   )
 
 # analytical dataset ------------------------------------------------------
@@ -71,11 +76,3 @@ analytical_mockup <- tibble( id = c( "1", "2", "3", "...", "N") ) %>%
   left_join(analytical %>% head(0), by = "id") %>%
   mutate_all(as.character) %>%
   replace(is.na(.), "")
-
-# long data
-analytical_long <- analytical %>%
-  pivot_longer(3:12, values_to = "outcome") %>%
-  separate(name, into = c("mens", "posicao")) %>%
-  set_variable_labels(
-    outcome = "Mensuração",
-  )

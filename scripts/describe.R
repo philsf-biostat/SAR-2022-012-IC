@@ -42,9 +42,10 @@ theme_gtsummary_language(language = "pt") # traduzir
 # tables ------------------------------------------------------------------
 
 tab_desc <- analytical %>%
+  # pivot_wider(names_from = mens, values_from = outcome) %>%
   tbl_summary(
-    include = -c(1:2),
-    # by = group,
+    include = outcome,
+    by = mens,
   ) %>%
   # modify_caption(caption = "**Tabela 1** Características demográficas") %>%
   # modify_header(label ~ "**Características dos pacientes**") %>%
