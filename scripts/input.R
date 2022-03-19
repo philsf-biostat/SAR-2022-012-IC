@@ -22,7 +22,6 @@ Nobs_orig <- data.raw %>% nrow
 
 data.raw <- data.raw %>%
   select(-nome) %>%
-  mutate_at(3:12, parse_number) %>%
   rename(
       id = prontuario,
       ante_plantar = ant_pre,
