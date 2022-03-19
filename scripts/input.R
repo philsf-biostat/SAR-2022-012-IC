@@ -71,3 +71,8 @@ analytical_mockup <- tibble( id = c( "1", "2", "3", "...", "N") ) %>%
   left_join(analytical %>% head(0), by = "id") %>%
   mutate_all(as.character) %>%
   replace(is.na(.), "")
+
+# long data
+analytical_long <- analytical %>%
+  pivot_longer(3:12, values_to = "outcome") %>%
+  separate(name, into = c("mens", "posicao"))
