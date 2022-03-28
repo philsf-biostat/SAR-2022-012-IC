@@ -13,7 +13,6 @@ Análise Estatística para Isnar Castro (INTO, 2022)
 
 1. Análise descritiva
 1. Análise inferencial
-1. Modelagem estatística
 
 ## Documentos
 

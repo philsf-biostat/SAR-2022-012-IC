@@ -6,25 +6,9 @@ redirect_from:
   - /portfolio/SAR-2022-012-IC/
   - /SAR-2022-012-IC/
 categories:
-  - case-control
   - cross-sectional
-  - longitudinal-studies
-  - cohort
-  - clinical-trial
-  - ecological
-  - epidemiology
-  - bioassay
 tags:
-  - prevalence
-  - incidence
-  - diagnostic-models
-  - prognostic-models
-  - survival-analysis
-  - efficacy
   - concordance-analysis
-  - survey
-  - machine-learning
-  - unsupervised-learning
 ---
 
 Objetivo
@@ -35,9 +19,6 @@ Análise Estatística para PESSOA (LOCAL, aaaa)
 
 1. Análise descritiva
 1. Análise inferencial
-1. Análise de poder
-1. Imputação de dados faltantes
-1. Modelagem estatística
 
 ## Documentos
 
