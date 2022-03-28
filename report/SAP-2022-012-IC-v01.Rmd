@@ -2,7 +2,7 @@
 title: "Plano Analítico para [title]"
 subtitle: 'DOCUMENTO: SAP-2022-012-IC-v01'
 author: '**De:** Felipe Figueiredo **Para:** ___'
-date: "`r Sys.Date()`"
+date: "2022-03-15"
 output:
   html_document:
     fig_caption: yes
