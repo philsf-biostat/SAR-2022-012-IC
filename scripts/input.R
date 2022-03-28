@@ -49,6 +49,12 @@ data.raw <- data.raw %>%
   separate(name, into = c("mens", "posicao")) %>%
   pivot_wider(names_from = mens, values_from = outcome)
 
+data.raw <- data.raw %>%
+  group_by(avaliador) %>%
+  mutate(avaliador = paste("Avaliador", cur_group_id())) %>%
+  ungroup() %>%
+  arrange(avaliador)
+
 # labels ------------------------------------------------------------------
 
 data.raw <- data.raw %>%
