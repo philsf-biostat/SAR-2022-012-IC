@@ -46,14 +46,19 @@ data.raw <- data.raw %>%
 # reshape
 data.raw <- data.raw %>%
   pivot_longer(3:12, values_to = "outcome") %>%
-  separate(name, into = c("mens", "posicao"))
+  separate(name, into = c("mens", "posicao")) %>%
+  pivot_wider(names_from = mens, values_from = outcome)
 
 # labels ------------------------------------------------------------------
 
 data.raw <- data.raw %>%
   set_variable_labels(
-    # group = "Study group",
-    outcome = "Mensuração",
+    posicao = "Posição",
+    ante = "Ante",
+    incis = "Incis",
+    poste = "Poste",
+    phisitiku = "Phisitiku",
+    zwipp = "Zwipp",
   )
 
 # analytical dataset ------------------------------------------------------
@@ -76,3 +81,6 @@ analytical_mockup <- tibble( id = c( "1", "2", "3", "...", "N") ) %>%
   left_join(analytical %>% head(0), by = "id") %>%
   mutate_all(as.character) %>%
   replace(is.na(.), "")
+
+analytical_long <- analytical %>%
+  pivot_longer(cols = -c(id, avaliador, posicao), names_to = "mens", values_to = "outcome")
