@@ -1,7 +1,7 @@
 ---
-title: "[title]"
+title: "Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose"
 subtitle: 'DOCUMENTO: SAR-2022-012-IC-v01'
-author: '**De:** Felipe Figueiredo **Para:** ___'
+author: '**De:** Felipe Figueiredo **Para:** Isnar Castro'
 date: "`r Sys.Date()`"
 output:
   html_document:
@@ -37,7 +37,7 @@ panderOptions('table.split.table', 160)
 
 \newpage
 
-**[title]**
+**Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose**
 
 **Histórico do documento**
 
@@ -107,7 +107,7 @@ tab_inf %>%
 
 # Referências
 
-- **SAP-2022-012-IC-v01** -- Plano Analítico para [title]
+- **SAP-2022-012-IC-v01** -- Plano Analítico para Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose
 
 # Apêndice
 

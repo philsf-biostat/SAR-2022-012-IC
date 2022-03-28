@@ -6,13 +6,13 @@
 # mensuracoes como variaveis / avaliador como observacoes
 tab_inf <- analytical_long %>%
   pivot_wider(names_from = mens, values_from = outcome) %>%
-  tbl_summary(include = 4:8, by = posicao) %>%
+  tbl_summary(include = ante:zwipp, by = posicao) %>%
   add_p()
 
 # avaliadores como variaveis / mensuracao como observacoes
-tab_inf_2 <- analytical_long %>%
-  pivot_wider(names_from = avaliador, values_from = outcome) %>%
-  tbl_summary(include = 4:8, by = posicao)
+tab_inf_2 <- analytical %>%
+  pivot_wider(names_from = posicao, values_from = ante:zwipp) %>%
+  tbl_summary(include = -id, by = avaliador)
 
 # template p-value table
 # tab_inf <- analytical %>%
