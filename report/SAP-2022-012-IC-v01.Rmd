@@ -152,6 +152,8 @@ exato de Fisher.
 
 ### Modelagem estatística
 
+N/A
+
 ### Dados faltantes
 
 Não serão realizadas imputações de dados faltantes.
