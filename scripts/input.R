@@ -96,6 +96,8 @@ analytical <- data.raw %>%
     avaliador,
     posicao,
     a,b,c,rot1,rot2,
+    phisitiku,
+    zwipp,
   )
 
 Nvar_final <- analytical %>% ncol
