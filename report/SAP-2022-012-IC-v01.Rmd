@@ -108,8 +108,7 @@ Com base nas distâncias A, B e C serão calculados os parâmetros:
 - Rotação 2 $= B - A$
 - Translação lateral $= C$
 
-Todas as variáveis da tabela de dados analíticos foram identificadas de acordo com as descrições das variáveis, e os valores foram identificados de acordo com o dicionário de dados providenciado.
-Estas identificações possibilitarão a criação de tabelas de resultados com qualidade de produção final.
+Após os cálculos dos parâmetros de rotação e translação, a tabela de dados foi redesenhada de modo que todas as mensurações estejam dispostas em uma única coluna, com as posições dorsal e plantar identificadas em uma variável categórica.
 
 Depois dos procedimentos de limpeza e seleção
 `r Nvar_final`
@@ -122,6 +121,9 @@ A Tabela 1 mostra a estrutura dos dados analíticos.
 analytical_mockup %>%
   pander(caption = "**Tabela 1** Estrutura da tabela de dados analíticos após seleção e limpeza das variáveis.")
 ```
+
+Todas as variáveis da tabela de dados analíticos foram identificadas de acordo com as descrições das variáveis, e os valores foram identificados de acordo com o dicionário de dados providenciado.
+Estas identificações possibilitarão a criação de tabelas de resultados com qualidade de produção final.
 
 # Parâmetros do estudo
 
@@ -144,7 +146,7 @@ Esta análise não avaliará desfecho clínico, portanto não há desfecho a ser
 
 ## Covariáveis
 
-N/A
+Não foram coletados dados demográficos e clínicos dos participantes de pesquisa.
 
 # Métodos estatísticos
 

@@ -93,7 +93,9 @@ analytical <- data.raw %>%
     id,
     # group,
     # outcome,
-    everything(),
+    avaliador,
+    posicao,
+    a,b,c,rot1,rot2,
   )
 
 Nvar_final <- analytical %>% ncol
