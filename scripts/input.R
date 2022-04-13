@@ -49,6 +49,22 @@ data.raw <- data.raw %>%
   separate(name, into = c("mens", "posicao")) %>%
   pivot_wider(names_from = mens, values_from = outcome)
 
+# variáveis do estudo
+# renomear as variáveis de distâncias mensuradas A, B e C
+# calcular as métricas
+data.raw <- data.raw %>%
+  rename(
+    a = ante,
+    b = poste,
+    c = incis,
+  ) %>%
+  mutate(
+    rot1 = a/b,
+    rot2 = b-a,
+    # c = c,
+  )
+
+# de-identificar avaliadores
 data.raw <- data.raw %>%
   group_by(avaliador) %>%
   mutate(avaliador = paste("Avaliador", cur_group_id())) %>%
@@ -60,9 +76,11 @@ data.raw <- data.raw %>%
 data.raw <- data.raw %>%
   set_variable_labels(
     posicao = "Posição",
-    ante = "Ante",
-    incis = "Incis",
-    poste = "Poste",
+    a = "",
+    b = "",
+    c = "",
+    rot1 = "",
+    rot2 = "",
     phisitiku = "Phisitiku",
     zwipp = "Zwipp",
   )
