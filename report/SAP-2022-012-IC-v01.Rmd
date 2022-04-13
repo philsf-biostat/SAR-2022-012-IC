@@ -57,21 +57,26 @@ kable(history)
 - d: tamanho de efeito D de Cohen
 - CV: coeficiente de variação
 - DP: desvio padrão
-- HR: razão de risco (*hazards ratio*)
 - IC: intervalo de confiança
+- ICC: Correlação intra-classe (*intra-class correlation*)
 - IIQ: intervalo interquartílico
-- IMC: índice de massa corpórea
-- IRR: razão de taxas de incidência (*incidence rates ratio*)
-- OR: razão de chances (*odds ratio*)
-- RR: razão de riscos (*risks ratio*)
 
 # Contexto
 
 ## Objetivos
 
+Avaliar
+consistência de mensurações radiográficas
+para diagnóstico de sindesmose tibiofibular distal,
+em tornozelos normais,
+nas posições de flexão dorsal 15 graus e flexão plantar 20 graus,
+através de cortes tomográficos no plano axial.
+
 ## Hipóteses
 
 ## Desenho do estudo
+
+Observacional, com coleta de dados transversal.
 
 # Dados
 
@@ -104,9 +109,28 @@ analytical_mockup %>%
   pander(caption = "**Tabela 1** Estrutura da tabela de dados analíticos após seleção e limpeza das variáveis.")
 ```
 
-# Variáveis do estudo
+# Parâmetros do estudo
 
-## Desfechos primário e secundários
+As distâncias A, B e C serão calculadas confome segue:
+
+- Distância A = entre o ponto mais anterior da incisura e o ponto mais anterior da fíbula;
+- Distância B = entre o ponto mais posterior da incisura até o ponto mais posterior da fíbula;
+- Distância C = menor distância entre a tíbia e a fíbula, medida no ponto médio da incisura.
+
+Com base nas distâncias A, B e C serão calculados os parâmetros:
+
+- razão A/B = Rotação
+- B-A = Rotação
+- C = Translação lateral
+
+Todas as mensurações foram realizadas por 5 avaliadores independentes.
+As medidas de rotação e translação lateral da fíbula serão avaliadas nesta análise, conforme decrito na seção 5.1.
+
+## Critérios de inclusão e exclusão
+
+## Exposições
+
+## Desfechos
 
 **Especificação das medidas de desfecho** (Zarin, 2011):
 
@@ -117,7 +141,11 @@ analytical_mockup %>%
 
 **Desfecho primário**
 
+Esta análise não avaliará desfecho clínico, portanto não há desfecho a ser definido.
+
 ## Covariáveis
+
+N/A
 
 # Métodos estatísticos
 
@@ -125,28 +153,32 @@ analytical_mockup %>%
 
 ### Análise descritiva
 
-O perfil epidemiológico dos participantes do estudo será descrito na baseline.
-As características demográficas
-(sexo, idade e IMC)
-e clínicas
-<!-- ( [vars] ) -->
-serão descritas como
-média (DP)
+<!-- O perfil epidemiológico dos participantes do estudo será descrito na baseline. -->
+<!-- As características -->
+<!-- demográficas -->
+<!-- (sexo, idade e IMC) -->
+<!-- clínicas -->
+<!-- ( Anter, Poster e Incisura, nas posições dorsal e plantar em milímetros ) -->
+<!-- serão descritas como -->
+<!-- média (DP) -->
 <!-- mediana (IIQ) -->
-ou frequência e proporção (%), conforme apropriado.
-As distribuições das características dos participantes serão resumidas em tabelas e visualizadas em gráficos exploratórios
+<!-- ou frequência e proporção (%), conforme apropriado. -->
+As mensurações referentes às medidas de rotação e translação lateral da fíbula (seção 4)
+serão descritas como
+média (DP).
+As distribuições das mensurações serão resumidas em tabelas e visualizadas em gráficos exploratórios
 
 ### Análise inferencial
 
-Todas as comparações entre os grupos serão avaliadas como análises univariadas.
-Variáveis contínuas serão comparadas entre os grupos com o
-teste t de grupos independentes com a correção de Welch.
-<!-- teste t pareado. -->
+Todas as comparações entre as mensurações serão avaliadas como análises univariadas.
+As análises serão feitas agrupando-se as medidas de rotação e translação lateral da fíbula por avaliador e por tipo de mensuração.
+
+A consistência das mensurações feitas por um mesmo avaliador nas posições dorsal e plantar serão avaliadas com o 
+<!-- teste t de grupos independentes com a correção de Welch. -->
+teste t pareado.
 <!-- teste de Wilcoxon. -->
-Diferenças nas distribuições de variáveis categóricas serão avaliadas com o teste
-exato de Fisher.
-<!-- qui-quadrado. -->
-<!-- McNemar. -->
+<!-- A consistência das mensurações feitas por avaliadores independentes será avaliada com  -->
+A consistência entre os avaliadores, quando realizam a mesma mensuração, será avaliada com a ICC.
 
 <!-- Todas as análises inferenciais serão realizadas com base nos modelos estatísticos (descritos na próxima seção). -->
 
@@ -190,12 +222,15 @@ Este documento foi elaborado seguindo recomendações de estrutura para Planos d
 
 ## Disponibilidade
 
-Tanto este plano analítico como o relatório correspondente (**SAR-2022-012-IC-v01**) podem ser obtidos no seguinte endereço:
+Todos os documentos gerados nessa consultoria foram incluídos no portfólio do consultor.
 
-<https://philsf-biostat.github.io/SAR-2022-012-IC/>
+<!-- O cliente solicitou que esta análise seja mantida confidencial até uma futura data, determinada pelo próprio cliente. -->
+<!-- Todos os documentos gerados nessa consultoria portanto não foram publicados online e apenas o título e o ano da análise foram incluídas no portfólio do consultor. -->
+<!-- Após a data acordada, os documentos serão disponibilizados. -->
 
 <!-- O cliente solicitou que esta análise seja mantida confidencial. -->
-<!-- Tanto este plano analítico como o relatório correspondente (**SAR-2022-012-IC-v01**) portanto não foram publicados online e apenas o título e o ano da análise foram incluídas no portfólio do consultor. -->
-<!-- O portfólio pode ser visto em: -->
+<!-- Todos os documentos gerados nessa consultoria portanto não foram publicados online e apenas o título e o ano da análise foram incluídas no portfólio do consultor. -->
 
-<!-- <https://philsf-biostat.github.io/> -->
+O portfólio pode ser visto em:
+
+<https://philsf-biostat.github.io/SAR-2022-012-IC/>
