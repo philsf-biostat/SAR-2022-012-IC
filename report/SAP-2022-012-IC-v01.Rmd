@@ -216,6 +216,8 @@ Esta análise será realizada utilizando-se o software `R` versão `r getRversio
 
 # Observações e limitações
 
+N/A
+
 # Referências
 
 - **SAR-2022-012-IC-v01** -- Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose
