@@ -76,11 +76,11 @@ data.raw <- data.raw %>%
 data.raw <- data.raw %>%
   set_variable_labels(
     posicao = "Posição",
-    a = "",
-    b = "",
-    c = "",
-    rot1 = "",
-    rot2 = "",
+    a = "Distância A",
+    b = "Distância B",
+    c = "Distância C",
+    rot1 = "Rotação 1",
+    rot2 = "Rotação 2",
     phisitiku = "Phisitiku",
     zwipp = "Zwipp",
   )
@@ -110,5 +110,6 @@ analytical_mockup <- tibble( id = c( "1", "2", "3", "...", "N") ) %>%
   mutate_all(as.character) %>%
   replace(is.na(.), "")
 
+outcomes <- c("rot1","rot2","c","phisitiku","zwipp")
 analytical_long <- analytical %>%
   pivot_longer(cols = -c(id, avaliador, posicao), names_to = "mens", values_to = "outcome")
