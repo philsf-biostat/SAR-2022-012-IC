@@ -22,7 +22,17 @@ Nobs_orig <- data.raw %>% nrow
 
 data.raw <- data.raw %>%
   select(-nome) %>%
-  rename(id = prontuario) %>%
+  rename(
+      id = prontuario,
+      ante_plantar = ant_pre,
+      ante_dorsal = ant_pos,
+      incis_plantar = incis_pre,
+      incis_dorsal = incis_pos,
+      poste_plantar = post_pre,
+      poste_dorsal = post_pos,
+      zwipp_plantar = zwipp_plan,
+      zwipp_dorsal = zwipp_dors,
+  ) %>%
   mutate() %>%
   filter()
 
@@ -33,12 +43,46 @@ data.raw <- data.raw %>%
     id = factor(id), # or as.character
   )
 
+# reshape
+data.raw <- data.raw %>%
+  pivot_longer(3:12, values_to = "outcome") %>%
+  separate(name, into = c("mens", "posicao")) %>%
+  pivot_wider(names_from = mens, values_from = outcome)
+
+# variáveis do estudo
+# renomear as variáveis de distâncias mensuradas A, B e C
+# calcular as métricas
+data.raw <- data.raw %>%
+  rename(
+    a = ante,
+    b = poste,
+    c = incis,
+  ) %>%
+  mutate(
+    rot1 = a/b,
+    rot2 = b-a,
+    # c = c,
+  )
+
+# de-identificar avaliadores
+data.raw <- data.raw %>%
+  group_by(avaliador) %>%
+  mutate(avaliador = paste("Avaliador", cur_group_id())) %>%
+  ungroup() %>%
+  arrange(avaliador)
+
 # labels ------------------------------------------------------------------
 
 data.raw <- data.raw %>%
   set_variable_labels(
-    # group = "Study group",
-    # outcome = "Study outcome",
+    posicao = "Posição",
+    a = "Distância A",
+    b = "Distância B",
+    c = "Distância C",
+    rot1 = "Rotação 1",
+    rot2 = "Rotação 2",
+    phisitiku = "Phisitiku",
+    zwipp = "Zwipp",
   )
 
 # analytical dataset ------------------------------------------------------
@@ -49,7 +93,11 @@ analytical <- data.raw %>%
     id,
     # group,
     # outcome,
-    everything(),
+    avaliador,
+    posicao,
+    a,b,c,rot1,rot2,
+    phisitiku,
+    zwipp,
   )
 
 Nvar_final <- analytical %>% ncol
@@ -61,3 +109,7 @@ analytical_mockup <- tibble( id = c( "1", "2", "3", "...", "N") ) %>%
   left_join(analytical %>% head(0), by = "id") %>%
   mutate_all(as.character) %>%
   replace(is.na(.), "")
+
+outcomes <- c("rot1","rot2","c","phisitiku","zwipp")
+analytical_long <- analytical %>%
+  pivot_longer(cols = -c(id, avaliador, posicao), names_to = "mens", values_to = "outcome")

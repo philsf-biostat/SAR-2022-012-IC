@@ -7,15 +7,17 @@ ff.pal <- "Paired"    # good for binary groups scale fill/color brewer
 scale_color_discrete <- function(...) scale_color_brewer(palette = ff.pal, ...)
 scale_fill_discrete <- function(...) scale_fill_brewer(palette = ff.pal, ...)
 
-gg <- analytical %>%
+gg <- analytical_long %>%
   ggplot() +
   theme_ff()
 
 # plots -------------------------------------------------------------------
 
 gg.outcome <- gg +
-  geom_density(aes(outcome, fill = group), alpha = .8) +
-  xlab(attr(analytical$outcome, "label")) +
+  geom_density(aes(outcome, fill = posicao), alpha = .9) +
+  facet_wrap(~ mens, scales = "free") +
+  labs(fill = "Posição") +
+  xlab("Mensurações") +
   ylab("")
 
 # cool facet trick from https://stackoverflow.com/questions/3695497 by JWilliman

@@ -6,40 +6,29 @@ redirect_from:
   - /portfolio/SAR-2022-012-IC/
   - /SAR-2022-012-IC/
 categories:
-  - case-control
   - cross-sectional
-  - longitudinal-studies
-  - cohort
-  - clinical-trial
-  - ecological
-  - epidemiology
-  - bioassay
 tags:
-  - prevalence
-  - incidence
-  - diagnostic-models
-  - prognostic-models
-  - survival-analysis
-  - efficacy
   - concordance-analysis
-  - survey
-  - machine-learning
-  - unsupervised-learning
 ---
 
 Objetivo
 
 Análise Estatística para PESSOA (LOCAL, aaaa)
+<!-- Relatório técnico para PESSOA (LOCAL, aaaa) -->
 
 ## Análises realizadas
 
 1. Análise descritiva
 1. Análise inferencial
-1. Análise de poder
-1. Imputação de dados faltantes
-1. Modelagem estatística
 
 ## Documentos
+
+<!-- O cliente solicitou que esta análise seja mantida confidencial até uma futura data, determinada pelo próprio cliente. -->
+<!-- Todos os documentos gerados nessa consultoria portanto não foram publicados online e apenas o título e o ano da análise foram incluídas no portfólio do consultor. -->
+<!-- Após a data acordada, os documentos serão disponibilizados. -->
+
+<!-- O cliente solicitou que esta análise seja mantida confidencial. -->
+<!-- Todos os documentos gerados nessa consultoria portanto não foram publicados online e apenas o título e o ano da análise foram incluídas no portfólio do consultor. -->
 
 ### Plano Analítico (SAP)
 

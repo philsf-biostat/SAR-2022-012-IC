@@ -1,8 +1,8 @@
 ---
-title: "[title]"
+title: "Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose"
 subtitle: 'DOCUMENTO: SAR-2022-012-IC-v01'
-author: '**De:** Felipe Figueiredo **Para:** ___'
-date: "`r Sys.Date()`"
+author: '**De:** Felipe Figueiredo **Para:** Isnar Castro'
+date: "2022-05-10"
 output:
   html_document:
     fig_caption: yes
@@ -37,7 +37,7 @@ panderOptions('table.split.table', 160)
 
 \newpage
 
-**[title]**
+**Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose**
 
 **Histórico do documento**
 
@@ -66,9 +66,15 @@ kable(history)
 source("scripts/results.R", encoding = 'UTF-8')
 ```
 
-## Variáveis
+## Parâmetros do estudo
 
-### Desfechos primário e secundário
+### Desenho do estudo
+
+### Critérios de inclusão e exclusão
+
+### Exposições
+
+### Desfechos
 
 ### Covariáveis
 
@@ -87,9 +93,16 @@ tab_desc %>%
   )
 ```
 
+```{r tab_desc_2}
+tab_desc_2 %>%
+    as_kable(
+    caption = "**Tabela 2** caption"
+  )
+```
+
 ```{r fig1, fig.cap="**Figura 1** caption"}
 # ![Age](../figures/outcome.png)
-# knitr::include_graphics("../figures/outcome.png", error = FALSE)
+knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
 
 ## Análise inferencial
@@ -97,8 +110,15 @@ tab_desc %>%
 ```{r tab_inf}
 tab_inf %>%
     as_kable(
-    caption = "**Tabela 2** caption"
+    caption = "**Tabela 3** caption"
   )
+```
+
+```{r tab_icc}
+# tab_icc %>%
+#     as_kable(
+#     caption = "**Tabela 4** caption"
+#   )
 ```
 
 # Observações e limitações
@@ -107,7 +127,7 @@ tab_inf %>%
 
 # Referências
 
-- **SAP-2022-012-IC-v01** -- Plano Analítico para [title]
+- **SAP-2022-012-IC-v01** -- Plano Analítico para Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose
 
 # Apêndice
 
@@ -120,17 +140,18 @@ tab_inf %>%
 
 ## Disponibilidade
 
-Tanto este documento como o plano analítico correspondente (**SAP-2022-012-IC-v01**) podem ser obtidos no seguinte endereço:
+Todos os documentos gerados nessa consultoria foram incluídos no portfólio do consultor.
 
-<!-- Este documento pode ser obtido no seguinte endereço: -->
-
-<https://philsf-biostat.github.io/SAR-2022-012-IC/>
+<!-- O cliente solicitou que esta análise seja mantida confidencial até uma futura data, determinada pelo próprio cliente. -->
+<!-- Todos os documentos gerados nessa consultoria portanto não foram publicados online e apenas o título e o ano da análise foram incluídas no portfólio do consultor. -->
+<!-- Após a data acordada, os documentos serão disponibilizados. -->
 
 <!-- O cliente solicitou que esta análise seja mantida confidencial. -->
-<!-- Tanto este documento como o plano analítico correspondente (**SAP-2022-012-IC-v01**) portanto não foram publicados online e apenas o título e o ano da análise foram incluídas no portfólio do consultor. -->
-<!-- O portfólio pode ser visto em: -->
+<!-- Todos os documentos gerados nessa consultoria portanto não foram publicados online e apenas o título e o ano da análise foram incluídas no portfólio do consultor. -->
 
-<!-- <https://philsf-biostat.github.io/> -->
+O portfólio pode ser visto em:
+
+<https://philsf-biostat.github.io/SAR-2022-012-IC/>
 
 ## Dados utilizados
 
