@@ -1,5 +1,5 @@
 # setup -------------------------------------------------------------------
-# library(infer)
+library(irr)
 
 # tables ------------------------------------------------------------------
 
@@ -13,6 +13,24 @@ tab_inf <- analytical %>%
   tbl_summary(by = posicao, include = -id) %>%
   # add_difference(test = everything() ~"paired.t.test", group = id)
   add_p(test = everything() ~"paired.t.test", group = id)
+
+my_icc <- function(data, var) {
+  val <- data %>%
+    select(id, avaliador, posicao, {{var}}) %>%
+    pivot_wider(names_from = avaliador:posicao, values_from = {{var}}) %>%
+    select(-id) %>%
+    icc(type = "ag")
+  tibble(
+    metric = {{var}},
+    val[c("value", "lbound", "ubound", "p.value")] %>% as_tibble(),
+    )
+}
+
+my_icc(analytical, "c")
+my_icc(analytical, "rot1")
+my_icc(analytical, "rot2")
+my_icc(analytical, "phisitiku")
+my_icc(analytical, "zwipp")
 
 # template p-value table
 # tab_inf <- analytical %>%
