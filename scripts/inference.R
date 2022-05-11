@@ -26,11 +26,17 @@ my_icc <- function(data, var) {
     )
 }
 
-my_icc(analytical, "c")
-my_icc(analytical, "rot1")
-my_icc(analytical, "rot2")
-my_icc(analytical, "phisitiku")
-my_icc(analytical, "zwipp")
+tab_icc <- rbind(
+  my_icc(analytical, "c"),
+  my_icc(analytical, "rot1"),
+  my_icc(analytical, "rot2"),
+  my_icc(analytical, "phisitiku"),
+  my_icc(analytical, "zwipp")
+) %>%
+  mutate(
+    across(c(value, lbound, ubound), ~ style_number(.x, digits = 2)),
+    p.value = style_pvalue(p.value)
+  )
 
 # template p-value table
 # tab_inf <- analytical %>%

@@ -115,10 +115,10 @@ tab_inf %>%
 ```
 
 ```{r tab_icc}
-# tab_icc %>%
-#     as_kable(
-#     caption = "**Tabela 4** caption"
-#   )
+tab_icc %>%
+  pander(
+    caption = "**Tabela 4** caption",
+  )
 ```
 
 # Observações e limitações
