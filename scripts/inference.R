@@ -23,6 +23,13 @@ my_icc <- function(data, var) {
   tibble(
     metric = var_label(data, unlist = TRUE)[{{var}}],
     val[c("value", "lbound", "ubound", "p.value")] %>% as_tibble(),
+    ) %>%
+    transmute(
+      metric,
+      # across(c(value, lbound, ubound), ~ style_number(.x, digits = 2)),
+      icc = style_number(value, digits = 2),
+      ic = format.interval(c(lbound, ubound)),
+      p.value = style_pvalue(p.value)
     )
 }
 
@@ -32,10 +39,6 @@ tab_icc <- rbind(
   my_icc(analytical, "rot2"),
   my_icc(analytical, "phisitiku"),
   my_icc(analytical, "zwipp")
-) %>%
-  mutate(
-    across(c(value, lbound, ubound), ~ style_number(.x, digits = 2)),
-    p.value = style_pvalue(p.value)
   )
 
 # template p-value table
