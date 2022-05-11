@@ -117,6 +117,12 @@ tab_inf %>%
 ```{r tab_icc}
 tab_icc %>%
   pander(
+    col.names = c(
+      metric = "Métrica",
+      icc = "ICC",
+      ic = "IC",
+      p.value = "Valor p"
+    ),
     caption = "**Tabela 4** caption",
   )
 ```
