@@ -21,7 +21,7 @@ my_icc <- function(data, var) {
     select(-id) %>%
     icc(type = "ag")
   tibble(
-    metric = {{var}},
+    metric = var_label(data, unlist = TRUE)[{{var}}],
     val[c("value", "lbound", "ubound", "p.value")] %>% as_tibble(),
     )
 }
