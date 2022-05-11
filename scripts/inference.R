@@ -4,10 +4,15 @@
 # tables ------------------------------------------------------------------
 
 # mensuracoes como variaveis / avaliador como observacoes
-tab_inf <- analytical_long %>%
-  pivot_wider(names_from = mens, values_from = outcome) %>%
-  tbl_summary(include = a:zwipp, by = posicao) %>%
-  add_p()
+tab_inf <- analytical %>%
+  mutate(id = paste(avaliador, id)) %>%
+  select(id, posicao, rot1, rot2, c, phisitiku, zwipp) %>%
+  filter(complete.cases(.)) %>%
+  group_by(id) %>%
+  filter(n() == 2) %>%
+  tbl_summary(by = posicao, include = -id) %>%
+  # add_difference(test = everything() ~"paired.t.test", group = id)
+  add_p(test = everything() ~"paired.t.test", group = id)
 
 # template p-value table
 # tab_inf <- analytical %>%
