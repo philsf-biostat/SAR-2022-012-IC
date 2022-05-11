@@ -36,3 +36,8 @@ tab_desc <- analytical %>%
   # modify_header(label ~ "**Características dos pacientes**") %>%
   bold_labels() %>%
   modify_table_styling(columns = "label", align = "c")
+
+# avaliadores como variaveis / mensuracao como observacoes
+tab_desc_2 <- analytical %>%
+  pivot_wider(names_from = posicao, values_from = a:zwipp) %>%
+  tbl_summary(include = -id, by = avaliador)

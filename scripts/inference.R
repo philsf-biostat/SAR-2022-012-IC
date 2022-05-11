@@ -9,11 +9,6 @@ tab_inf <- analytical_long %>%
   tbl_summary(include = a:zwipp, by = posicao) %>%
   add_p()
 
-# avaliadores como variaveis / mensuracao como observacoes
-tab_inf_2 <- analytical %>%
-  pivot_wider(names_from = posicao, values_from = a:zwipp) %>%
-  tbl_summary(include = -id, by = avaliador)
-
 # template p-value table
 # tab_inf <- analytical %>%
 #   tbl_summary(

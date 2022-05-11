@@ -2,7 +2,7 @@
 title: "Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose"
 subtitle: 'DOCUMENTO: SAR-2022-012-IC-v01'
 author: '**De:** Felipe Figueiredo **Para:** Isnar Castro'
-date: "`r Sys.Date()`"
+date: "2022-05-10"
 output:
   html_document:
     fig_caption: yes
@@ -93,9 +93,16 @@ tab_desc %>%
   )
 ```
 
+```{r tab_desc_2}
+tab_desc_2 %>%
+    as_kable(
+    caption = "**Tabela 2** caption"
+  )
+```
+
 ```{r fig1, fig.cap="**Figura 1** caption"}
 # ![Age](../figures/outcome.png)
-# knitr::include_graphics("../figures/outcome.png", error = FALSE)
+knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
 
 ## Análise inferencial
@@ -103,8 +110,15 @@ tab_desc %>%
 ```{r tab_inf}
 tab_inf %>%
     as_kable(
-    caption = "**Tabela 2** caption"
+    caption = "**Tabela 3** caption"
   )
+```
+
+```{r tab_icc}
+# tab_icc %>%
+#     as_kable(
+#     caption = "**Tabela 4** caption"
+#   )
 ```
 
 # Observações e limitações
