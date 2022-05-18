@@ -31,6 +31,7 @@ my_icc <- function(data, var) {
 #   filter(n() == 2) %>%
 #   tbl_summary(by = posicao, include = -id) %>%
 #   # add_difference(test = everything() ~"paired.t.test", group = id)
+#   modify_header(label ~ "**Mensurações**") %>%
 #   add_p(test = everything() ~"paired.t.test", group = id)
 # 
 # write_rds(tab_inf, "dataset/tab_inf.rds")
