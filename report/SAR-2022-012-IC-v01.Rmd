@@ -89,18 +89,18 @@ Esta análise foi realizada utilizando-se o software `R` versão `r getRversion(
 ```{r tab_desc}
 tab_desc %>%
     as_kable(
-    caption = "**Tabela 1** caption"
+    caption = "**Tabela 1** Mensurações do estudo."
   )
 ```
 
 ```{r tab_desc_2}
 tab_desc_2 %>%
     as_kable(
-    caption = "**Tabela 2** caption"
+    caption = "**Tabela 2** Mensurações de cada avaliador."
   )
 ```
 
-```{r fig1, fig.cap="**Figura 1** caption"}
+```{r fig1, fig.cap="**Figura 1** Distribuição de densidade das mensurações do estudo."}
 # ![Age](../figures/outcome.png)
 knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
