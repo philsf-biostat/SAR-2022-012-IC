@@ -74,6 +74,9 @@ data.raw <- data.raw %>%
 # labels ------------------------------------------------------------------
 
 data.raw <- data.raw %>%
+  mutate(
+    posicao = str_to_sentence(posicao),
+  ) %>%
   set_variable_labels(
     posicao = "Posição",
     a = "Distância A",
@@ -112,4 +115,7 @@ analytical_mockup <- tibble( id = c( "1", "2", "3", "...", "N") ) %>%
 
 outcomes <- c("rot1","rot2","c","phisitiku","zwipp")
 analytical_long <- analytical %>%
-  pivot_longer(cols = -c(id, avaliador, posicao), names_to = "mens", values_to = "outcome")
+  pivot_longer(cols = -c(id, avaliador, posicao), names_to = "mens", values_to = "outcome") %>%
+  mutate(
+    mens = str_to_upper(mens),
+  )
