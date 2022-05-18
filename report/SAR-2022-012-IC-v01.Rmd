@@ -2,7 +2,7 @@
 title: "Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose"
 subtitle: 'DOCUMENTO: SAR-2022-012-IC-v01'
 author: '**De:** Felipe Figueiredo **Para:** Isnar Castro'
-date: "2022-05-10"
+date: "2022-05-18"
 output:
   html_document:
     fig_caption: yes
