@@ -43,6 +43,22 @@ theme_gtsummary_language(language = "pt") # traduzir
 # # avaliadores como variaveis / mensuracao como observacoes
 # tab_desc_2 <- analytical %>%
 #   pivot_wider(names_from = posicao, values_from = a:zwipp) %>%
+#   set_variable_labels(
+#     a_Plantar = "Distância A (plantar)",
+#     a_Dorsal = "Distância A (dorsal)",
+#     b_Plantar = "Distância B (plantar)",
+#     b_Dorsal = "Distância B (dorsal)",
+#     c_Plantar = "Distância C (plantar)",
+#     c_Dorsal = "Distância C (dorsal)",
+#     rot1_Plantar = "Rotação 1 (plantar)",
+#     rot1_Dorsal = "Rotação 1 (dorsal)",
+#     rot2_Plantar = "Rotação 2 (plantar)",
+#     rot2_Dorsal = "Rotação 2 (dorsal)",
+#     phisitiku_Plantar = "Phisitiku (plantar)",
+#     phisitiku_Dorsal = "Phisitiku (dorsal)",
+#     zwipp_Plantar = "Zwipp (plantar)",
+#     zwipp_Dorsal = "Zwipp (dorsal)",
+#   ) %>%
 #   tbl_summary(include = -id, by = avaliador) %>%
 #   modify_header(label ~ "**Mensurações**")
 # 
