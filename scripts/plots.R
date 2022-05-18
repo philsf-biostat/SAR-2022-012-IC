@@ -18,7 +18,7 @@ gg.outcome <- gg +
   facet_wrap(~ mens, scales = "free") +
   labs(fill = "Posição") +
   xlab("Mensurações") +
-  ylab("")
+  ylab("Densidade")
 
 # cool facet trick from https://stackoverflow.com/questions/3695497 by JWilliman
 # gg +
