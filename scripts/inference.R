@@ -22,16 +22,20 @@ my_icc <- function(data, var) {
 
 # tables ------------------------------------------------------------------
 
-# mensuracoes como variaveis / avaliador como observacoes
-tab_inf <- analytical %>%
-  mutate(id = paste(avaliador, id)) %>%
-  select(id, posicao, rot1, rot2, c, phisitiku, zwipp) %>%
-  filter(complete.cases(.)) %>%
-  group_by(id) %>%
-  filter(n() == 2) %>%
-  tbl_summary(by = posicao, include = -id) %>%
-  # add_difference(test = everything() ~"paired.t.test", group = id)
-  add_p(test = everything() ~"paired.t.test", group = id)
+# # mensuracoes como variaveis / avaliador como observacoes
+# tab_inf <- analytical %>%
+#   mutate(id = paste(avaliador, id)) %>%
+#   select(id, posicao, rot1, rot2, c, phisitiku, zwipp) %>%
+#   filter(complete.cases(.)) %>%
+#   group_by(id) %>%
+#   filter(n() == 2) %>%
+#   tbl_summary(by = posicao, include = -id) %>%
+#   # add_difference(test = everything() ~"paired.t.test", group = id)
+#   add_p(test = everything() ~"paired.t.test", group = id)
+# 
+# write_rds(tab_inf, "dataset/tab_inf.rds")
+
+tab_inf <- read_rds("dataset/tab_inf.rds")
 
 tab_icc <- rbind(
   my_icc(analytical, "c"),
