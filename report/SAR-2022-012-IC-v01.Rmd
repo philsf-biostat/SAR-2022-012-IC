@@ -93,7 +93,7 @@ A partir das distâncias A e B as métricas Rotação 1 e Rotação 2 foram calc
 ```{r tab_desc}
 tab_desc %>%
     as_kable(
-    caption = "**Tabela 1** Mensurações do estudo."
+    caption = paste("**Tabela 1** Mensurações do estudo (N =", N_part, "participantes, 5 avaliadores).")
   )
 ```
 
