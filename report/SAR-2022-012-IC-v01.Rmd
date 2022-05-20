@@ -2,7 +2,7 @@
 title: "Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose"
 subtitle: 'DOCUMENTO: SAR-2022-012-IC-v01'
 author: '**De:** Felipe Figueiredo **Para:** Isnar Castro'
-date: "2022-05-10"
+date: "2022-05-18"
 output:
   html_document:
     fig_caption: yes
@@ -86,39 +86,58 @@ Esta análise foi realizada utilizando-se o software `R` versão `r getRversion(
 
 ## População do estudo e acompanhamento
 
+Ao todo `r N_part` participantes foram incluídos no estudo.
+Mensurações de cinco métricas foram realizadas em duas posições, plantar e dorsal (Tabela 1, Figura 1), por cinco avaliadores diferentes.
+A partir das distâncias A e B as métricas Rotação 1 e Rotação 2 foram calculadas.
+
 ```{r tab_desc}
 tab_desc %>%
     as_kable(
-    caption = "**Tabela 1** caption"
+    caption = paste("**Tabela 1** Mensurações do estudo (N =", N_part, "participantes, 5 avaliadores).")
   )
 ```
+
+As distribuições das mensurações mostram razoável consistência nas mensurações brutas, com boa parte dos parâmetros apresentando distribuições unimodais razoavelmente simétricas tanto na posição dorsal como plantar.
+Uma possível exceção é a Distância B, mas esta aparente bimodalidade da distribuição parece não se refletir em complexidade na distribuição dos parâmetros calculados a partir dela: as rotações externas ROT1 e ROT2 (figura 1) não apresentam características particularmente complexas em suas distribuições.
+
+```{r fig1, fig.cap="**Figura 1** Distribuição de densidade das mensurações do estudo."}
+# ![Age](../figures/outcome.png)
+knitr::include_graphics("../figures/outcome.png", error = FALSE)
+```
+
+A tabela 2 exibe o resumo numérico das distribuições dos parâmetros, mensurados nos `r N_part` participantes, estratificada por avaliador.
+Esta tabela indica a dificuldade em se realizar as mensurações dos parâmetros avaliados.
+Embora a variabilidade de cada parâmetro mensurado pelos avaliadores seja baixa, relativa à sua média, as médias de cada parâmetro variam notavelmente entre um avaliador e outro.
 
 ```{r tab_desc_2}
 tab_desc_2 %>%
     as_kable(
-    caption = "**Tabela 2** caption"
+    caption = "**Tabela 2** Mensurações de cada avaliador."
   )
 ```
 
-```{r fig1, fig.cap="**Figura 1** caption"}
-# ![Age](../figures/outcome.png)
-knitr::include_graphics("../figures/outcome.png", error = FALSE)
-```
+As consistências das mensurações dos parâmetros (como proxy da dificuldade em realizar a mensuração) será avaliada na próxima seção.
 
 ## Análise inferencial
 
 ```{r tab_inf}
 tab_inf %>%
     as_kable(
-    caption = "**Tabela 3** caption"
+    caption = "**Tabela 3** Comparação intra-avaliador dos parâmetros indicativos de sindesmose."
   )
 ```
 
 ```{r tab_icc}
-# tab_icc %>%
-#     as_kable(
-#     caption = "**Tabela 4** caption"
-#   )
+tab_icc %>%
+  pander(
+    col.names = c(
+      metric = "Métrica",
+      icc = "ICC",
+      ic = "IC",
+      p.value = "Valor p"
+    ),
+    caption = "**Tabela 4** Correlação intra-classe (ICC) inter-observador dos parâmetros indicativos de sindemose.",
+  )
 ```
 
 # Observações e limitações

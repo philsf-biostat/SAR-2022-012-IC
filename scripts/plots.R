@@ -16,9 +16,12 @@ gg <- analytical_long %>%
 gg.outcome <- gg +
   geom_density(aes(outcome, fill = posicao), alpha = .9) +
   facet_wrap(~ mens, scales = "free") +
-  labs(fill = "Posição") +
+  labs(
+    fill = "Posição",
+    caption = paste("N =", N_part, "participantes\n5 avaliadores")
+       ) +
   xlab("Mensurações") +
-  ylab("")
+  ylab("Densidade")
 
 # cool facet trick from https://stackoverflow.com/questions/3695497 by JWilliman
 # gg +
