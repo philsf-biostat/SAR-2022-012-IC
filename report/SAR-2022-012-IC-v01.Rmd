@@ -122,6 +122,10 @@ As consistências das mensurações dos parâmetros (como proxy da dificuldade e
 
 ### Consistência intra-avaliador
 
+A consistência intra-avaliador foi avaliada comparando as médias pareadas entre as posições dorsal e plantar (Tabela 3).
+As três mensurações principais (Rotação 1, Rotação 2 e Distância C) foram significativamente diferentes entre as posições.
+Não há evidências de que as mensurações Phisitiku e Zwipp sejam diferentes entre as duas posições.
+
 ```{r tab_inf}
 tab_inf %>%
     as_kable(
