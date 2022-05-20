@@ -86,6 +86,10 @@ Esta análise foi realizada utilizando-se o software `R` versão `r getRversion(
 
 ## População do estudo e acompanhamento
 
+Ao todo `r analytical %>% count(id) %>% nrow` participantes foram incluídos no estudo.
+Mensurações de cinco métricas foram realizadas em duas posições, plantar e dorsal (Tabela 1, Figura 1), por cinco avaliadores diferentes.
+A partir das distâncias A e B as métricas Rotação 1 e Rotação 2 foram calculadas.
+
 ```{r tab_desc}
 tab_desc %>%
     as_kable(
