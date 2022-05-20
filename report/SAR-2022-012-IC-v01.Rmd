@@ -118,7 +118,9 @@ tab_desc_2 %>%
 
 As consistências das mensurações dos parâmetros (como proxy da dificuldade em realizar a mensuração) será avaliada na próxima seção.
 
-## Análise inferencial
+## Consistência das mensurações radiológicas para avaliação de sindesmose
+
+### Consistência intra-avaliador
 
 ```{r tab_inf}
 tab_inf %>%
@@ -126,6 +128,8 @@ tab_inf %>%
     caption = "**Tabela 3** Comparação intra-avaliador dos parâmetros indicativos de sindesmose."
   )
 ```
+
+### Consistência inter-avaliador
 
 ```{r tab_icc}
 tab_icc %>%
