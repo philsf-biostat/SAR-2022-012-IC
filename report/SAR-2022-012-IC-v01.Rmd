@@ -123,7 +123,7 @@ As consistências das mensurações dos parâmetros (como proxy da dificuldade e
 ```{r tab_inf}
 tab_inf %>%
     as_kable(
-    caption = "**Tabela 3** caption"
+    caption = "**Tabela 3** Comparação intra-avaliador dos parâmetros indicativos de sindesmose."
   )
 ```
 
@@ -136,7 +136,7 @@ tab_icc %>%
       ic = "IC",
       p.value = "Valor p"
     ),
-    caption = "**Tabela 4** caption",
+    caption = "**Tabela 4** Correlação intra-classe (ICC) inter-observador dos parâmetros indicativos de sindemose.",
   )
 ```
 
