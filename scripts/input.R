@@ -105,6 +105,7 @@ analytical <- data.raw %>%
 
 Nvar_final <- analytical %>% ncol
 Nobs_final <- analytical %>% nrow
+N_part <- analytical %>% count(id) %>% nrow
 
 # mockup of analytical dataset for SAP and public SAR
 analytical_mockup <- tibble( id = c( "1", "2", "3", "...", "N") ) %>%

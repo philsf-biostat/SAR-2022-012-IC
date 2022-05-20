@@ -86,7 +86,7 @@ Esta análise foi realizada utilizando-se o software `R` versão `r getRversion(
 
 ## População do estudo e acompanhamento
 
-Ao todo `r analytical %>% count(id) %>% nrow` participantes foram incluídos no estudo.
+Ao todo `r N_part` participantes foram incluídos no estudo.
 Mensurações de cinco métricas foram realizadas em duas posições, plantar e dorsal (Tabela 1, Figura 1), por cinco avaliadores diferentes.
 A partir das distâncias A e B as métricas Rotação 1 e Rotação 2 foram calculadas.
 
@@ -97,10 +97,17 @@ tab_desc %>%
   )
 ```
 
+As distribuições das mensurações mostram razoável consistência nas mensurações brutas, com boa parte dos parâmetros apresentando distribuições unimodais razoavelmente simétricas tanto na posição dorsal como plantar.
+Uma possível exceção é a Distância B, mas esta aparente bimodalidade da distribuição parece não se refletir em complexidade na distribuição dos parâmetros calculados a partir dela: as rotações externas ROT1 e ROT2 (figura 1) não apresentam características particularmente complexas em suas distribuições.
+
 ```{r fig1, fig.cap="**Figura 1** Distribuição de densidade das mensurações do estudo."}
 # ![Age](../figures/outcome.png)
 knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
+
+A tabela 2 exibe o resumo numérico das distribuições dos parâmetros, mensurados nos `r N_part` participantes, estratificada por avaliador.
+Esta tabela indica a dificuldade em se realizar as mensurações dos parâmetros avaliados.
+Embora a variabilidade de cada parâmetro mensurado pelos avaliadores seja baixa, relativa à sua média, as médias de cada parâmetro variam notavelmente entre um avaliador e outro.
 
 ```{r tab_desc_2}
 tab_desc_2 %>%
@@ -108,6 +115,8 @@ tab_desc_2 %>%
     caption = "**Tabela 2** Mensurações de cada avaliador."
   )
 ```
+
+As consistências das mensurações dos parâmetros (como proxy da dificuldade em realizar a mensuração) será avaliada na próxima seção.
 
 ## Análise inferencial
 
