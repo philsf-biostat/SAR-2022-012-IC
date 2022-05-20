@@ -135,6 +135,15 @@ tab_inf %>%
 
 ### Consistência inter-avaliador
 
+A consistência inter-avaliador foi avaliada usando-se o ICC.
+Trocando-se os avaliadores, as mensurações de sindesmose apresentaram consistência
+pobre
+na amostra do estudo.
+A estimativa de ICC da
+Distância C foi 0,3 (de 0,16 a 0,49),
+da Rotação 1 ICC = 0,1 (de 0,01 a 0,23)
+e da Rotação 2 ICC = 0,2 (de 0,11 a 0,41).
+
 ```{r tab_icc}
 tab_icc %>%
   pander(
@@ -147,6 +156,9 @@ tab_icc %>%
     caption = "**Tabela 4** Correlação intra-classe (ICC) inter-observador dos parâmetros indicativos de sindemose.",
   )
 ```
+
+Nas mensurações de Phisitiku foi observada ICC baixa a moderada (ICC = 0,3, de 0,18 a 0,50).
+Não há evidências de que as medidas de Zwipp tenham consistência mensurável.
 
 # Observações e limitações
 
