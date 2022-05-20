@@ -97,16 +97,16 @@ tab_desc %>%
   )
 ```
 
+```{r fig1, fig.cap="**Figura 1** Distribuição de densidade das mensurações do estudo."}
+# ![Age](../figures/outcome.png)
+knitr::include_graphics("../figures/outcome.png", error = FALSE)
+```
+
 ```{r tab_desc_2}
 tab_desc_2 %>%
     as_kable(
     caption = "**Tabela 2** Mensurações de cada avaliador."
   )
-```
-
-```{r fig1, fig.cap="**Figura 1** Distribuição de densidade das mensurações do estudo."}
-# ![Age](../figures/outcome.png)
-knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
 
 ## Análise inferencial
