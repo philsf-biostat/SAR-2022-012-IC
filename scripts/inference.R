@@ -30,9 +30,12 @@ my_icc <- function(data, var) {
 #   group_by(id) %>%
 #   filter(n() == 2) %>%
 #   tbl_summary(by = posicao, include = -id) %>%
-#   # add_difference(test = everything() ~"paired.t.test", group = id)
-#   modify_header(label ~ "**Mensurações**") %>%
-#   add_p(test = everything() ~"paired.t.test", group = id)
+#   add_difference(test = everything() ~"paired.t.test", group = id) %>%
+#   # add_p(test = everything() ~"paired.t.test", group = id) %>%
+#   modify_header(
+#     label ~ "**Mensurações**",
+#     estimate ~ '**Diferença**',
+#   )
 # 
 # write_rds(tab_inf, "dataset/tab_inf.rds")
 

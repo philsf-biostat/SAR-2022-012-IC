@@ -1,8 +1,8 @@
 ---
-title: "Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose"
+title: "Consistência de mensurações radiológicas para diagnóstico de sindesmose"
 subtitle: 'DOCUMENTO: SAR-2022-012-IC-v01'
 author: '**De:** Felipe Figueiredo **Para:** Isnar Castro'
-date: "2022-05-18"
+date: "2022-05-20"
 output:
   html_document:
     fig_caption: yes
@@ -37,7 +37,7 @@ panderOptions('table.split.table', 160)
 
 \newpage
 
-**Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose**
+**Consistência de mensurações radiológicas para diagnóstico de sindesmose**
 
 **Histórico do documento**
 
@@ -118,7 +118,13 @@ tab_desc_2 %>%
 
 As consistências das mensurações dos parâmetros (como proxy da dificuldade em realizar a mensuração) será avaliada na próxima seção.
 
-## Análise inferencial
+## Consistência das mensurações radiológicas para avaliação de sindesmose
+
+### Consistência intra-avaliador
+
+A consistência intra-avaliador foi avaliada comparando as médias pareadas entre as posições dorsal e plantar (Tabela 3).
+As três mensurações principais (Rotação 1, Rotação 2 e Distância C) foram significativamente diferentes entre as posições.
+Não há evidências de que as mensurações Phisitiku e Zwipp sejam diferentes entre as duas posições.
 
 ```{r tab_inf}
 tab_inf %>%
@@ -126,6 +132,17 @@ tab_inf %>%
     caption = "**Tabela 3** Comparação intra-avaliador dos parâmetros indicativos de sindesmose."
   )
 ```
+
+### Consistência inter-avaliador
+
+A consistência inter-avaliador foi avaliada usando-se o ICC.
+Trocando-se os avaliadores, as mensurações de sindesmose apresentaram consistência
+pobre
+na amostra do estudo.
+A estimativa de ICC da
+Distância C foi 0,3 (de 0,16 a 0,49),
+da Rotação 1 ICC = 0,1 (de 0,01 a 0,23)
+e da Rotação 2 ICC = 0,2 (de 0,11 a 0,41).
 
 ```{r tab_icc}
 tab_icc %>%
@@ -140,13 +157,16 @@ tab_icc %>%
   )
 ```
 
+Nas mensurações de Phisitiku foi observada ICC baixa a moderada (ICC = 0,3, de 0,18 a 0,50).
+Não há evidências de que as medidas de Zwipp tenham consistência mensurável.
+
 # Observações e limitações
 
 # Conclusões
 
 # Referências
 
-- **SAP-2022-012-IC-v01** -- Plano Analítico para Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose
+- **SAP-2022-012-IC-v01** -- Plano Analítico para Consistência de mensurações radiológicas para diagnóstico de sindesmose
 
 # Apêndice
 
