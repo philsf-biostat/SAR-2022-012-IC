@@ -1,7 +1,7 @@
-# Consistência inter-avaliador de mensurações radiológicas para diagnóstico de sindesmose
+# Consistência de mensurações radiológicas para diagnóstico de sindesmose
 
 Avaliar
-consistência de mensurações radiográficas
+consistência intra- e inter-avaliador de mensurações radiográficas
 para diagnóstico de sindesmose tibiofibular distal,
 em tornozelos normais,
 nas posições de flexão dorsal 15 graus e flexão plantar 20 graus,

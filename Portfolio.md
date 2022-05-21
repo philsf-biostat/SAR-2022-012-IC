@@ -1,19 +1,25 @@
 ---
-title: '[title]'
-date: ""
+title: 'Consistência de mensurações radiológicas para diagnóstico de sindesmose'
+date: "2022-05-20"
 permalink: /portfolio/SAR-2022-012/
 redirect_from:
   - /portfolio/SAR-2022-012-IC/
   - /SAR-2022-012-IC/
+  - /SAR-2022-012/
 categories:
   - cross-sectional
 tags:
   - concordance-analysis
 ---
 
-Objetivo
+Avaliar
+consistência intra- e inter-avaliador de mensurações radiográficas
+para diagnóstico de sindesmose tibiofibular distal,
+em tornozelos normais,
+nas posições de flexão dorsal 15 graus e flexão plantar 20 graus,
+através de cortes tomográficos no plano axial.
 
-Análise Estatística para PESSOA (LOCAL, aaaa)
+Análise Estatística para Isnar Castro (INTO, 2022)
 <!-- Relatório técnico para PESSOA (LOCAL, aaaa) -->
 
 ## Análises realizadas
