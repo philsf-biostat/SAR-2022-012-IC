@@ -157,7 +157,7 @@ tab_icc %>%
   )
 ```
 
-Nas mensurações de Phisitiku foi observada ICC baixa a moderada (ICC = 0,3, de 0,18 a 0,50).
+Nas mensurações de Phisitiku foi observada ICC pobre a moderada (ICC = 0,3, de 0,18 a 0,50).
 Não há evidências de que as medidas de Zwipp tenham consistência mensurável.
 
 # Observações e limitações
