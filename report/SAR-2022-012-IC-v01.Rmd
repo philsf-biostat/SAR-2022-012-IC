@@ -50,9 +50,18 @@ colnames(history) <- c("Versão", "Alterações")
 kable(history)
 ```
 
+```{r results, include=FALSE}
+source("scripts/results.R", encoding = 'UTF-8')
+```
+
 ---
 
 # Lista de abreviaturas
+
+- CV: coeficiente de variação
+- DP: desvio padrão
+- IC: intervalo de confiança
+- ICC: Correlação intra-classe (*intra-class correlation*)
 
 # Contexto
 
@@ -67,25 +76,75 @@ através de cortes tomográficos no plano axial.
 
 ## Recepção e tratamento dos dados
 
-# Metodologia
+A base de dados original possuía
+`r Nvar_orig`
+variáveis coletadas de
+`r Nobs_orig`
+observações.
 
-```{r results, include=FALSE}
-source("scripts/results.R", encoding = 'UTF-8')
-```
+As distâncias A, B e C foram mensuradas conforme segue:
+
+- Distância A = entre o ponto mais anterior da incisura e o ponto mais anterior da fíbula;
+- Distância B = entre o ponto mais posterior da incisura até o ponto mais posterior da fíbula;
+- Distância C = menor distância entre a tíbia e a fíbula, medida no ponto médio da incisura.
+
+Todas as mensurações foram realizadas por 5 avaliadores independentes, em duas posições (dorsal e plantar).
+Com base nas distâncias A, B e C serão calculados os parâmetros:
+
+- Rotação 1 = $A / B$
+- Rotação 2 = $B - A$
+- Translação lateral = $C$
+
+Após os cálculos dos parâmetros de rotação e translação, a tabela de dados foi redesenhada de modo que todas as mensurações estejam dispostas em uma única coluna, com as posições dorsal e plantar identificadas em uma variável categórica.
+
+Depois dos procedimentos de limpeza e seleção
+`r Nvar_final`
+variáveis foram incluídas na análise com
+`r Nobs_final`
+observações.
+
+# Metodologia
 
 ## Parâmetros do estudo
 
 ### Desenho do estudo
 
+Observacional, com coleta de dados transversal.
+
 ### Critérios de inclusão e exclusão
+
+N/A
 
 ### Exposições
 
+N/A
+
 ### Desfechos
+
+Esta análise não avaliará desfecho clínico, portanto não há desfecho a ser definido.
 
 ### Covariáveis
 
+Não foram coletados dados demográficos e clínicos dos participantes de pesquisa.
+
 ## Análises Estatísticas
+
+As mensurações referentes às medidas de rotação e translação lateral da fíbula
+serão descritas como
+média (DP).
+As distribuições das mensurações serão resumidas em tabelas e visualizadas em gráficos exploratórios
+Todas as comparações entre as mensurações serão avaliadas como análises univariadas.
+As análises serão feitas agrupando-se as medidas de rotação e translação lateral da fíbula por avaliador e por tipo de mensuração.
+A consistência das mensurações feitas por um mesmo avaliador nas posições dorsal e plantar serão avaliadas com o 
+<!-- teste t de grupos independentes com a correção de Welch. -->
+teste t pareado.
+<!-- teste de Wilcoxon. -->
+<!-- A consistência das mensurações feitas por avaliadores independentes será avaliada com  -->
+A consistência entre os avaliadores, quando realizam a mesma mensuração, será avaliada com a ICC.
+Todas as avaliações serão realizadas como análises de casos completos.
+Todas as análises serão realizadas ao nível de significância de 5%.
+Todos os testes de hipóteses e intervalos de confiança calculados serão
+bicaudais.
 
 Esta análise foi realizada utilizando-se o software `R` versão `r getRversion()`.
 
@@ -169,6 +228,8 @@ Não há evidências de que as medidas de Zwipp tenham consistência mensurável
 
 # Observações e limitações
 
+N/A
+
 # Conclusões
 
 As mensurações avaliadas apresentaram baixa consistência intra-avaliador ente as posições plantar e dorsal.
@@ -192,6 +253,8 @@ As mensurações de Phisitiku e Zwipp também apresentaram consistência pobre (
 # Apêndice
 
 ## Análise exploratória de dados
+
+N/A
 
 ```{r A1, fig.cap="**Figura A1** Distribuição da idade na população do estudo."}
 # ![Age](../figures/distr_age.png)
