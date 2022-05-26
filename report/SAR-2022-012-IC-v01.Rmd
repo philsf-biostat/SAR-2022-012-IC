@@ -178,6 +178,12 @@ rotação 2 (diferença média -0,05) e
 distância C (diferença média 0,03).
 As mensurações de Phisitiku e Zwipp não foram significativamente diferentes.
 
+A consistência inter-avaliador foi pobre nas mensurações de
+rotação 1 (ICC 0,09),
+rotação 2 (ICC 0,23) e
+Distância C (ICC 0,29).
+As mensurações de Phisitiku e Zwipp também apresentaram consistência pobre (ICC 0,31 e 0,02, respectivamente).
+
 # Referências
 
 - **SAP-2022-012-IC-v01** -- Plano Analítico para Consistência de mensurações radiológicas para diagnóstico de sindesmose
