@@ -1,6 +1,6 @@
 ---
 title: 'Consistência de mensurações radiológicas para diagnóstico de sindesmose'
-date: "2022-05-20"
+date: "2022-05-26"
 permalink: /portfolio/SAR-2022-012/
 redirect_from:
   - /portfolio/SAR-2022-012-IC/
