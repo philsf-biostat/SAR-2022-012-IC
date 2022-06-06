@@ -24,12 +24,12 @@ data.raw <- data.raw %>%
   select(-nome) %>%
   rename(
       id = prontuario,
-      ante_plantar = ant_pre,
-      ante_dorsal = ant_pos,
-      incis_plantar = incis_pre,
-      incis_dorsal = incis_pos,
-      poste_plantar = post_pre,
-      poste_dorsal = post_pos,
+      ante_plantar = ant_pos,
+      ante_dorsal = ant_pre,
+      incis_plantar = incis_pos,
+      incis_dorsal = incis_pre,
+      poste_plantar = post_pos,
+      poste_dorsal = post_pre,
       zwipp_plantar = zwipp_plan,
       zwipp_dorsal = zwipp_dors,
   ) %>%
